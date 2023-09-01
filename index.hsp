@@ -7,7 +7,7 @@ if strsize2=-1{mes "File not found!":end}
 builtin_signature="Wine builtin DLL"
 sdim buffermemory,strsize2
 bload dircmdlines,buffermemory
-memcpy buffermemory,builtin_signature,strlen(builtin_signature),0x40,0
+memcpy buffermemory,builtin_signature,strlen(builtin_signature)+1,0x40,0
 bsave dircmdlines,buffermemory
 mes "Success modified!"
 end
